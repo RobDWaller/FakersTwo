@@ -1,0 +1,2 @@
+#!/bin/sh
+./vendor/bin/phpcs -p --standard=PSR2 --colors ./app ./tests

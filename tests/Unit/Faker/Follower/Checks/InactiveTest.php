@@ -155,7 +155,16 @@ class InactiveTest extends TestCase
         $user = m::mock(User::class);
 
         $user->shouldReceive('getLastTweet')->once()->andReturn(
-            new Tweet(123123456456789789, 'Hello World', Carbon::now()->subDays(90)->toDateTimeString(), 10, 5, true, false, 'en')
+            new Tweet(
+                123123456456789789,
+                'Hello World',
+                Carbon::now()->subDays(90)->toDateTimeString(),
+                10,
+                5,
+                true,
+                false,
+                'en'
+            )
         );
 
         $result = $inactiveCheck->hasOldLastTweet($user);
@@ -174,7 +183,16 @@ class InactiveTest extends TestCase
         $user = m::mock(User::class);
 
         $user->shouldReceive('getLastTweet')->once()->andReturn(
-            new Tweet(123123456456789789, 'Hello World', Carbon::now()->subDays(89)->toDateTimeString(), 10, 5, true, false, 'en')
+            new Tweet(
+                123123456456789789,
+                'Hello World',
+                Carbon::now()->subDays(89)->toDateTimeString(),
+                10,
+                5,
+                true,
+                false,
+                'en'
+            )
         );
 
         $result = $inactiveCheck->hasOldLastTweet($user);

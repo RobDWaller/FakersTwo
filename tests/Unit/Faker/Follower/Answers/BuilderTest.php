@@ -40,7 +40,7 @@ class BuilderTest extends TestCase
 
         $this->assertEquals(23, $result->count());
 
-        $fakes = $result->filter(function($fake){
+        $fakes = $result->filter(function ($fake) {
             return $fake->getType() === 'fake';
         });
 
@@ -57,7 +57,7 @@ class BuilderTest extends TestCase
 
         $result = $check->run($mapper->buildUser($user->getUser()));
 
-        $inactives = $result->filter(function($inactive){
+        $inactives = $result->filter(function ($inactive) {
             return $inactive->getType() === 'inactive';
         });
 
@@ -74,7 +74,7 @@ class BuilderTest extends TestCase
 
         $result = $check->run($mapper->buildUser($user->getUser()));
 
-        $goods = $result->filter(function($good){
+        $goods = $result->filter(function ($good) {
             return $good->getType() === 'good';
         });
 

@@ -57,33 +57,32 @@ class User
         string $language,
         string $avatarUrlString,
         bool $isFollowing
-    )
-    {
+    ) {
         $this->twitterId = $twitterId;
 
         $this->handle = $handle;
 
         $this->location = $location;
 
-		$this->timeZone = $timeZone;
+        $this->timeZone = $timeZone;
 
-		$this->description = $description;
+        $this->description = $description;
 
-		$this->websiteUrlString = $websiteUrlString;
+        $this->websiteUrlString = $websiteUrlString;
 
-		$this->privateAccount = $privateAccount;
+        $this->privateAccount = $privateAccount;
 
-		$this->followersCount = $followersCount;
+        $this->followersCount = $followersCount;
 
-		$this->followsCount = $followsCount;
+        $this->followsCount = $followsCount;
 
-		$this->listedCount = $listedCount;
+        $this->listedCount = $listedCount;
 
-		$this->createdAt = $createdAt;
+        $this->createdAt = $createdAt;
 
-		$this->favouritesCount = $favouritesCount;
+        $this->favouritesCount = $favouritesCount;
 
-		$this->tweetsCount = $tweetsCount;
+        $this->tweetsCount = $tweetsCount;
 
         $this->language = $language;
 
@@ -150,9 +149,9 @@ class User
     public function getAccountAgeDays(): int
     {
         return $this->calculateAccountAgeDays(
-                Carbon::parse($this->createdAt)->getTimestamp(),
-                Carbon::now()->getTimestamp()
-            );
+            Carbon::parse($this->createdAt)->getTimestamp(),
+            Carbon::now()->getTimestamp()
+        );
     }
 
     public function getFavouritesCount(): int

@@ -189,7 +189,16 @@ class GoodTest extends TestCase
         $user = m::mock(User::class);
 
         $user->shouldReceive('getLastTweet')->once()->andReturn(
-            new Tweet(123123456456789789, 'Hello World', Carbon::now()->subDays(19)->toDateTimeString(), 10, 5, true, false, 'en')
+            new Tweet(
+                123123456456789789,
+                'Hello World',
+                Carbon::now()->subDays(19)->toDateTimeString(),
+                10,
+                5,
+                true,
+                false,
+                'en'
+            )
         );
 
         $result = $goodCheck->hasRecentLastTweet($user);
@@ -208,7 +217,16 @@ class GoodTest extends TestCase
         $user = m::mock(User::class);
 
         $user->shouldReceive('getLastTweet')->once()->andReturn(
-            new Tweet(123123456456789789, 'Hello World', Carbon::now()->subDays(20)->toDateTimeString(), 10, 5, true, false, 'en')
+            new Tweet(
+                123123456456789789,
+                'Hello World',
+                Carbon::now()->subDays(20)->toDateTimeString(),
+                10,
+                5,
+                true,
+                false,
+                'en'
+            )
         );
 
         $result = $goodCheck->hasRecentLastTweet($user);

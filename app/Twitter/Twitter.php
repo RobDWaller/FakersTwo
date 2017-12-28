@@ -21,11 +21,9 @@ class Twitter
 
     public function getProfile()
     {
-
     }
 
     public function postTweet()
     {
-
     }
 }

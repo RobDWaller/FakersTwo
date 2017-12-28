@@ -37,21 +37,21 @@ class Mapper
     {
         $userObject = new User(
             $user->id,
-			$user->screen_name,
-			$user->location,
-			$user->timezone,
-			$user->description,
-			$user->url,
-			$user->protected,
-			$user->followers_count,
-			$user->friends_count,
-			$user->listed_count,
-			$user->created_at,
-			$user->favourites_count,
-			$user->statuses_count,
-			$user->lang,
-			$user->profile_image_url_https,
-			$user->following
+            $user->screen_name,
+            $user->location,
+            $user->timezone,
+            $user->description,
+            $user->url,
+            $user->protected,
+            $user->followers_count,
+            $user->friends_count,
+            $user->listed_count,
+            $user->created_at,
+            $user->favourites_count,
+            $user->statuses_count,
+            $user->lang,
+            $user->profile_image_url_https,
+            $user->following
         );
 
         if (isset($user->status)) {

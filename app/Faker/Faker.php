@@ -42,8 +42,7 @@ class Faker
 
         $statusCollection = new StatusCollection;
 
-        foreach ($this->users as $user)
-        {
+        foreach ($this->users as $user) {
             $answerCollection = $answerBuilder->run($user);
 
             $score = new FollowerScore($answerCollection);

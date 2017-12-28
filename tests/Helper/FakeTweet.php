@@ -14,13 +14,13 @@ class FakeTweet
         $faker = Factory::create();
 
         $tweet->id = $faker->randomNumber();
-		$tweet->text = $faker->sentence;
-		$tweet->created_at = $faker->date('Y-m-d', 'now') . ' ' . $faker->time('H:i:s');
-		$tweet->retweet_count = $faker->randomNumber();
-		$tweet->favorite_count = $faker->randomNumber();
-		$tweet->retweeted = $faker->boolean;
-		$tweet->favorited = $faker->boolean;
-		$tweet->lang = $faker->languageCode;
+        $tweet->text = $faker->sentence;
+        $tweet->created_at = $faker->date('Y-m-d', 'now') . ' ' . $faker->time('H:i:s');
+        $tweet->retweet_count = $faker->randomNumber();
+        $tweet->favorite_count = $faker->randomNumber();
+        $tweet->retweeted = $faker->boolean;
+        $tweet->favorited = $faker->boolean;
+        $tweet->lang = $faker->languageCode;
 
         return $tweet;
     }

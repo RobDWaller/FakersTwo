@@ -42,8 +42,8 @@ class Score
 
     private function filterAnswers(string $filter)
     {
-        return $this->answers->filter(function($answer) use ($filter){
-           return $answer->getType() === $filter;
+        return $this->answers->filter(function ($answer) use ($filter) {
+            return $answer->getType() === $filter;
         });
     }
 

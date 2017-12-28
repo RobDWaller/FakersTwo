@@ -31,8 +31,7 @@ class Tweet
         bool $retweeted,
         bool $favourited,
         string $language
-    )
-    {
+    ) {
         $this->id = $id;
 
         $this->text = $text;

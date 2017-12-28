@@ -30,7 +30,7 @@ class Score
 
     public function getFakeCount(): int
     {
-        $fake = $this->followerStatuses->filter(function($follower){
+        $fake = $this->followerStatuses->filter(function ($follower) {
             return $follower->getStatusString() === 'fake';
         });
 
@@ -39,7 +39,7 @@ class Score
 
     public function getInactiveCount(): int
     {
-        $inactive = $this->followerStatuses->filter(function($follower){
+        $inactive = $this->followerStatuses->filter(function ($follower) {
             return $follower->getStatusString() === 'inactive';
         });
 
@@ -48,7 +48,7 @@ class Score
 
     public function getGoodCount(): int
     {
-        $good = $this->followerStatuses->filter(function($follower){
+        $good = $this->followerStatuses->filter(function ($follower) {
             return $follower->getStatusString() === 'good';
         });
 

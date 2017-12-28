@@ -77,14 +77,32 @@ class TweetTest extends TestCase
 
     public function testBigIntId()
     {
-        $tweet = new Tweet(123123456456789789, 'Hello World', '2017-12-17 19:06:52', 10, 5, true, false, 'en');
+        $tweet = new Tweet(
+            123123456456789789,
+            'Hello World',
+            '2017-12-17 19:06:52',
+            10,
+            5,
+            true,
+            false,
+            'en'
+        );
 
         $this->assertEquals($tweet->getId(), 123123456456789789);
     }
 
     public function testGetTweetAge()
     {
-        $tweet = new Tweet(123123456456789789, 'Hello World', Carbon::now()->subDays(10)->toDateTimeString(), 10, 5, true, false, 'en');
+        $tweet = new Tweet(
+            123123456456789789,
+            'Hello World',
+            Carbon::now()->subDays(10)->toDateTimeString(),
+            10,
+            5,
+            true,
+            false,
+            'en'
+        );
 
         $this->assertEquals($tweet->getTweetAge(), 10);
     }

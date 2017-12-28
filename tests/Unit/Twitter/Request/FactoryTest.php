@@ -18,5 +18,4 @@ class FactoryTest extends TestCase
 
         $this->assertInstanceOf(Request::class, $factory->make($auth));
     }
-
 }
