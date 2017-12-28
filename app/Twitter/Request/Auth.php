@@ -15,7 +15,7 @@ class Auth
 
     private $accessTokenSecret;
 
-    public function __construct(string $key, string $secret, string $accessToken, string $accestTokenSecret)
+    public function __construct(string $key, string $secret, string $accessToken, string $accessTokenSecret)
     {
         $this->key = $key;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Twitter;
+namespace App\Twitter\OAuth;
 
 use App\Twitter\OAuth\Connection;
 /**

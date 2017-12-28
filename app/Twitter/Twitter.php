@@ -2,8 +2,8 @@
 
 namespace App\Twitter;
 
-use Twitter\Request\Auth;
-use Twitter\Request\Factory;
+use App\Twitter\Request\Auth;
+use App\Twitter\Request\Factory;
 
 class Twitter
 {

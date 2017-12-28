@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Twitter;
+namespace App\Twitter\Request;
 
 use App\Twitter\Request\Connection;
 

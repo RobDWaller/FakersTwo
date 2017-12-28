@@ -24,13 +24,19 @@
         ],
         "psr-4": {
             "App\\": "app/",
-            "App\\Twitter\\": "app/Twitter",
-            "App\\Faker\\": "app/Faker"
+            "App\\Twitter\\": "app/Twitter/",
+            "App\\Twitter\\Request\\": "app/Twitter/Request/",
+            "App\\Twitter\\OAuth\\": "app/Twitter/OAuth/",
+            "App\\Faker\\": "app/Faker/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\": "tests/"
+            "Tests\\": "tests/",
+            "Tests\\Unit\\": "tests/unit/",
+            "Tests\\Unit\\Twitter\\": "test/Unit/Twitter/",
+            "Tests\\Unit\\Twitter\\Request\\": "test/Unit/Twitter/Request/",
+            "Tests\\Unit\\Twitter\\OAuth\\": "test/Unit/Twitter/Request/"
         }
     },
     "extra": {

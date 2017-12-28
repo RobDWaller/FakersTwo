@@ -17,7 +17,7 @@ class Connection
         $this->auth = $auth;
     }
 
-    public function makeConnection(): TwitterOauth
+    public function makeConnection(): TwitterOAuth
     {
         return new TwitterOAuth(
             $this->auth->getKey(),

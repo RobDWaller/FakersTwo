@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Twitter\Request;
+namespace App\Twitter\OAuth;
 
 use App\Twitter\Oauth\Auth;
 use Abraham\TwitterOAuth\TwitterOAuth;
