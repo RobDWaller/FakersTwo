@@ -17,7 +17,7 @@ class CreateUserDetailsTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('user_id');
             $table->string('screen_name', 45);
-            $table->string('profile_image', 255);
+            $table->string('profile_image', 255)->nullable();
             $table->timestamps();
             $table->unique('user_id');
             $table->foreign('user_id')->references('id')->on('users');

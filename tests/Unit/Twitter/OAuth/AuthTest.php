@@ -27,4 +27,50 @@ class AuthTest extends TestCase
 
         $this->assertEquals($auth->getSecret(), 'Park');
     }
+
+    public function testSetOauthToken()
+    {
+        $auth = new Auth('Car', 'Park');
+
+        $auth->setOAuthToken('Pork');
+
+        $this->assertEquals($auth->getOAuthToken(), 'Pork');
+    }
+
+    public function testSetOauthTokenSecret()
+    {
+        $auth = new Auth('Car', 'Park');
+
+        $auth->setOAuthTokenSecret('Pie');
+
+        $this->assertEquals($auth->getOAuthTokenSecret(), 'Pie');
+    }
+
+    public function testHasTokensTrue()
+    {
+        $auth = new Auth('Car', 'Park');
+
+        $auth->setOAuthToken('Pork');
+        $auth->setOAuthTokenSecret('Pie');
+
+        $this->assertTrue($auth->hasTokens());
+    }
+
+    public function testHasTokensFalse()
+    {
+        $auth = new Auth('Car', 'Park');
+
+        $auth->setOAuthToken('Pork');
+
+        $this->assertFalse($auth->hasTokens());
+    }
+
+    public function testHasTokensFalseTwo()
+    {
+        $auth = new Auth('Car', 'Park');
+
+        $auth->setOAuthTokenSecret('Pie');
+
+        $this->assertFalse($auth->hasTokens());
+    }
 }

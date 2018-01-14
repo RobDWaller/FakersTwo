@@ -12,5 +12,19 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
+});
+
+Route::get('/login', function () {
+    return redirect(url('/'));
+});
+
+Route::post('/authenticate', 'AuthenticateController@index');
+
+Route::get('/authenticate/return', 'AuthenticateController@return');
+
+Route::get('/authenticate/logout', 'AuthenticateController@logout');
+
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/dashboard', 'DashboardController@index');
 });

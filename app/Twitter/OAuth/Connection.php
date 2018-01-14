@@ -17,8 +17,17 @@ class Connection
         $this->auth = $auth;
     }
 
-    public function makeConnection(): TwitterOauth
+    public function makeConnection(bool $hasTokens = false): TwitterOauth
     {
+        if ($this->auth->hasTokens()) {
+            return new TwitterOAuth(
+                $this->auth->getKey(),
+                $this->auth->getSecret(),
+                $this->auth->getOAuthToken(),
+                $this->auth->getOAuthTokenSecret()
+            );
+        }
+
         return new TwitterOAuth(
             $this->auth->getKey(),
             $this->auth->getSecret()
