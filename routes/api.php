@@ -13,6 +13,12 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
+
+Route::post('/token', 'Api\TokenController@get');
+
+Route::group(['middleware' => ['auth.api']], function () {
+    Route::patch('/token/update', 'Api\TokenController@update');
 });
